@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.raspberry.board.dao.ResBookDao">
+
+    <insert id="addResBookInfo" parameterType="ResBookDto">
+        INSERT INTO ResBookInfo (rbook_num, rb_uname, rtime, rhead_count, rid, uid)
+        VALUES (#{rbook_num}, #{rb_uname}, #{rtime}, #{rhead_count}, #{rid}, #{uid})
+    </insert>
+
+    <delete id="cancelReservation" parameterType="Integer">
+        DELETE FROM ResBookInfo
+        WHERE rbook_num = #{rbook_num}
+    </delete>
+
+    <delete id="refuseReservation"  parameterType="Integer">
+        DELETE FROM ResBookInfo
+        WHERE rbook_num = #{rbook_num}
+    </delete>
+
+    <select id="getResBookInfo" resultType="ResBookDto">
+        SELECT * FROM ResBookInfo WHERE rid=#{rid}
+    </select>
+
+
+
+</mapper>

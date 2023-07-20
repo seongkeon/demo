@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.raspberry.board.dao.ProMemberDao">
+    <insert id="pJoin" parameterType="ProMemberDto">
+        INSERT INTO promemberinfo
+        VALUES (#{pid},#{ppwd},#{pcenter_name},#{pcenter_loc}
+                ,#{pcenter_num},#{pbus_num})
+    </insert>
+
+    <update id="proMemberPwUpdate" parameterType="string">
+        UPDATE promemberinfo
+        SET  ppwd=#{ppwd}
+        WHERE pid=#{pid}
+    </update>
+
+    <select id="pIdCheck" resultType="java.lang.Integer" parameterType="String">
+        SELECT count(*) FROM promemberinfo WHERE pid=#{pid}
+    </select>
+
+    <select id="selectPass" resultType="java.lang.String" parameterType="String">
+        SELECT ppwd FROM promemberinfo WHERE pid=#{pid}
+    </select>
+
+    <select id="selectMember" resultType="com.raspberry.board.dto.ProMemberDto"
+            parameterType="String">
+        SELECT * FROM promemberview WHERE pid=#{pid}
+    </select>
+
+    <select id="pFindId2" resultType="String">
+        SELECT pid FROM promemberinfo WHERE pcenter_name=#{pcenter_name} AND pcenter_num=#{pcenter_num}
+    </select>
+
+    <select id="proResetPwd2" resultType="Boolean">
+        SELECT count(*) FROM promemberinfo WHERE pid=#{pid} AND pcenter_name=#{pcenter_name} AND pcenter_num=#{pcenter_num}
+    </select>
+</mapper>

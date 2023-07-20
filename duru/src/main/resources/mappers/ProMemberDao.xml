@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.raspberry.board.dao.ProMemberDao">
+    <insert id="pJoin" parameterType="ProMemberDto">
+        INSERT INTO promemberinfo
+        VALUES (#{pid},#{ppwd},#{pcenter_name},#{pcenter_loc}
+                ,#{pcenter_num},#{pbus_num})
+    </insert>
+    <select id="pIdCheck" resultType="java.lang.Integer" parameterType="String">
+        SELECT count(*) FROM promemberinfo WHERE pid=#{pid}
+    </select>
+
+    <select id="selectPass" resultType="java.lang.String" parameterType="String">
+        SELECT ppwd FROM promemberinfo WHERE pid=#{pid}
+    </select>
+    <select id="selectMember" resultType="com.raspberry.board.dto.ProMemberDto">
+        SELECT * promemberview WHERE pid=#{pid}
+    </select>
+</mapper>

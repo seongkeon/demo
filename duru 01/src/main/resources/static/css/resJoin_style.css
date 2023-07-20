@@ -1,0 +1,210 @@
+@font-face {
+  font-family: 'TheJamsil5Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: 'TheJamsil5Bold';
+  
+  }
+  
+  body {
+    background-image:#34495e;
+  }
+  
+  .joinForm {
+    position:absolute;
+    width:400px;
+    height:400px;
+    padding: 30px, 20px;
+    background-color:#FFFFFF;
+    text-align:center;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+  }
+  
+  .joinForm h2 {
+    text-align: center;
+    margin: 30px;
+  }
+  
+  .textForm {
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 10px 10px;
+    
+  }
+  
+  
+  .id {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  
+  .pw {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  .pw_confirm{
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  .res_name {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  .res_num{
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  .phone {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  
+  .address {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  
+  .menu{
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  
+  .size{
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+  .btn {
+    position:relative;
+    left:15%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+    width:35%;
+    height:40px;
+    background-color: #4999e4;
+    background-position: left;
+    background-size: 200%;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    border:none;
+    cursor:pointer;
+    transition: 0.4s;
+    display:inline;
+  }
+  .btn:hover {
+    background-color: #4a82d6;
+    }
+  .back-btn {
+    position:relative;
+    left:20%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+    width:35%;
+    height:40px;
+    background-color: #4999e4;
+    background-position: left;
+    background-size: 200%;
+    border-radius: 3px;
+    color:white;
+    font-weight: bold;
+    border:none;
+    cursor:pointer;
+    transition: 0.4s;
+    display:inline;
+  }
+  .back-btn:hover{
+    background-color: #4a82d6;
+  }
+  .btn:hover {
+    background-position: right;
+  }
+  .back-btn:hover {
+    background-position: right;
+  }
+ 
+  .w-btn-green{
+    background-color: #77af9c;
+    color: #d7fff1;
+  }
+  .gender{
+    margin-right:370px;
+    width: 120px;
+  }
+  .phone{
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+  }
+
+  .w-btn-id{
+    position: relative;
+    border: none;
+    display: block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: 'TheJamsil5Bold';
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    width:150px;
+    margin: 0 auto;
+    left: 270px;
+    top: 260px;
+  }

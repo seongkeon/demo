@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'TheJamsil5Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    }
+    *{
+        font-family: 'TheJamsil5Bold';
+    }
+    #banner{
+        background-color: #4999e4;
+        width: 800px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+    #banner h1 {
+        margin-left: 20px;
+    }
+    #box{
+        background-color: aliceblue;
+        margin: 0 auto;
+        width: 800px;
+        height: 700px;
+        position: relative;
+        top: 20px;
+        border-radius: 15px;
+    }
+    
+  
+    .container {
+        width: 80%;
+        height: 550px;
+        background-color: #fff;
+        border-radius: 15px;
+        margin: 0 auto;
+        position:relative;
+        top: 20px;
+    }
+
+    #author{
+        position: relative;
+        top: 30px;
+        left: 70px;
+    }
+    #writer{
+        
+        width: 100px;
+        height: 40px;
+        position: relative;
+        left: 140px;
+    }
+    #title-input{
+    
+        width: 450px;
+        height: 30px;
+        position: relative;
+        left: 130px;
+        top: 23px;
+    }
+    #title{
+        position: relative;
+        top: 50px;
+        left: 70px;
+    }
+    #contents{
+        position: relative;
+        left: 70px;
+        top: 50px;
+    }
+    .contents-input{
+        resize: none;
+        width: 450px;
+        height: 350px;
+        position: relative;
+        left: 130px;
+        top: 23px;
+    }
+    .btn-container {
+        text-align: center;
+        margin-top: 70px;
+      }
+  
+      .btn {
+        display: inline-block;
+        background-color: #4999e4;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        text-decoration: none;
+        margin-right: 10px;
+        width: 80px;
+      }
+  
+      .btn:hover {
+        background-color: #4a82d6;
+      }
+
+</style>
+<body>
+    <div id="banner"><h1>게시판</h1></div>
+    <div id="box">
+        <div class="container">
+            <div id="author">작성자</div>
+            <div id="writer"></div>
+            <div id="title">제목</div>
+            <input id="title-input" required value="">
+            <div id="contents">내용</div>
+            <textarea name="" class="contents-input" required></textarea>
+        </div>
+        <div class="btn-container">
+            <a href="#" class="btn">수정 완료</a>
+           
+            <a href="#" class="btn">취소</a>
+          </div>
+    </div>
+    
+</body>
+</html>

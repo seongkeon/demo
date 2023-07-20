@@ -1,0 +1,323 @@
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2 {
+    margin-top: 10px;
+    font-family: 'TheJamsil5Bold';
+}
+#boxbig {
+    margin: 0 auto; /*화면 중앙에 배치*/
+    width: 1200px;
+    background-color: #ffffff;
+    height: 1300px;
+}
+
+#box1 {
+    margin: 20px 5px 10px 5px;
+    width: 1190px;
+    height: 200px;
+    border-radius: 30px;
+    background-color: #ecf2ff;
+}
+
+#box2 {
+    margin: 20px 5px 10px 5px;
+    width: 1190px;
+    height: 600px;
+    background-color: #fff
+}
+
+#box3 {
+    margin: 10px 2.5px 100px 2.5px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 592.5px;
+    height: 300px;
+}
+
+#box4 {
+    float: right;
+    height: 300px;
+    width: 500px;
+    margin: 10px 2.5px 100px 2.5px;
+
+}
+
+/***************자주 찾는 서비스 부분*******************/
+ul {
+    list-style: none;
+}
+#box1 ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    font-family: 'TheJamsil5Bold';
+    font-weight: 900;
+}
+
+#box1 ul {
+    padding: 0;
+    overflow: hidden;
+}
+#box1 ul li {
+    float: left;
+    width: 16.6%; /*자주 찾는 서비스 사이의 거리 %*/
+    text-align: center;
+    margin: 15px 0;
+}
+#box1 ul li a span {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    line-height: 150px; /*수직으로 중간에 오기*/
+}
+
+#box1 ul li a p{
+    margin-top: 8px;
+}
+
+#quick-icon1{
+    background-color: #fff;
+    background-image:url('../images/res_icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#quick-icon2{
+    background-color: #fff;
+    background-image:url('../images/tax_icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#quick-icon3{
+    background-color: #fff;
+    background-image:url('../images/pro_icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#quick-icon4{
+    background-color: #fff;
+    background-image:url('../images/res_book_icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#quick-icon5{
+    background-color: #fff;
+    background-image:url('../images/tax_book_icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#quick-icon6{
+    background-color: #fff;
+    background-image:url('../images/pro_book_icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*************************사업자 아이콘*********************/
+#quick-icon1-1{
+    background-color: #fff;
+    background-image:url('../images/res_bus_icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#quick-icon2-1{
+    background-color: #fff;
+    background-image:url('../images/tax_bus_icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#quick-icon3-1{
+    background-color: #fff;
+    background-image:url('../images/pro_bus_icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#quick-icon1-1:hover {
+    opacity: 0.5;
+    border: 2.5px solid #0050ff;
+}
+#quick-icon2-1:hover {
+    opacity: 0.5;
+    border: 2.5px solid #0050ff;
+}
+#quick-icon3-1:hover {
+    opacity: 0.5;
+    border: 2.5px solid #0050ff;
+}
+/********************************************************/
+
+#box1 ul li a:hover {
+    color: #0050ff;
+}
+
+#quick-icon1:hover {
+    opacity: 0.5;
+    border: 2.5px solid #0050ff;
+}
+#quick-icon2:hover {
+    opacity: 0.5;
+    border: 2.5px solid #0050ff;
+}
+#quick-icon3:hover {
+    opacity: 0.5;
+    border: 2.5px solid #0050ff;
+}
+#quick-icon4:hover {
+    opacity: 0.5;
+    border: 2.5px solid #0050ff;
+}
+#quick-icon5:hover {
+    opacity: 0.5;
+    border: 2.5px solid #0050ff;
+}
+#quick-icon6:hover {
+    opacity: 0.5;
+    border: 2.5px solid #0050ff;
+}
+
+/*********************************************/
+
+#box2 .phrase-title{
+    text-align: center;
+    font-size: x-large;
+}
+#box2 .phrase{
+    text-align: center;
+    line-height: 150px; /*수직으로 중간에 오기*/
+}
+
+#small-intro1{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 40px;
+}
+#small-intro2{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 40px;
+}
+#small-intro3{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 40px;
+}
+
+#small-intro1 #gif1{
+    width: 250px;
+    height: 250px;
+    border-radius: 40px;
+    background-size: cover;
+}
+#small-intro2 #gif2{
+    width: 250px;
+    height: 250px;
+    border-radius: 40px;
+    background-size: cover;
+}
+#small-intro3 #gif3{
+    width: 250px;
+    height: 250px;
+    border-radius: 40px;
+    background-size: cover;
+}
+
+
+#small-intro1 #gif1:hover{
+    opacity: 0;
+}
+#small-intro2 #gif2:hover{
+    opacity: 0;
+}
+#small-intro3 #gif3:hover{
+    opacity: 0;
+}
+
+#box2 ul li{
+    float: left;
+    width: 33%; /*자주 찾는 서비스 사이의 거리 %*/
+    text-align: center;
+    margin: 60px 0;
+}
+#small-intro1:hover{
+    background-image: url("../images/food.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#small-intro2:hover{
+    background-image: url("../images/car.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#small-intro3:hover{
+    background-image: url("../images/program.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/**********************게시판 부분********************/
+#box3 {
+    float: left ;
+    font-family: 'TheJamsil5Bold';
+}
+#box3 input[type="radio"]{
+    display: none; /*라디오 버튼 감춤*/
+}
+#box3 label{
+    display: inline-block;
+    margin: 0 0;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+    border: 1px solid transparent;
+}
+#box3 label:hover{
+    color: #222;
+    cursor: pointer;
+}
+#box3 input:checked + label {
+    color: #07c;
+    border:  1px solid #ddd;
+    background-color: #eee;
+}
+.tabContent {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+.tabContent h2 {
+    display: none;
+}
+#notice ul{
+    list-style: disc;
+    margin-left: 30px;
+}
+#notice ul li {
+    font-size: 16px;
+    line-height: 2.5;
+}
+#tab1:checked ~ #notice,
+#tab2:checked ~ #gallery {
+    display: block;
+}
+
+

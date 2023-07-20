@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'TheJamsil5Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    }
+    *{
+        font-family: 'TheJamsil5Bold';
+    }
+    #banner{
+        background-color: #4999e4;
+        width: 800px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+    #banner h1 {
+        margin-left: 20px;
+    }
+    #container{
+        width: 800px;
+        height: 900px;
+        border-radius: 15px;
+        margin: 0 auto;
+        background-color: aliceblue;
+    }
+    #contents{
+        width: 95%;
+        height: 250px;
+        background-color: gray;
+        margin: 0 auto;
+        position: relative;
+        bottom:50px;
+    }
+    #writer{
+        position: relative;
+        top: 35px;
+        left: 100px;
+    }
+    #date{
+        position: relative;
+        bottom: 35px;
+        left: 450px;
+    }
+    #writer-input{
+        height: 50px;
+        width: 200px;
+        background-color: gray;
+        position: relative;
+        left: 160px;
+    }
+    #date-input{
+        height: 50px;
+        width: 200px;
+        background-color: gray;
+        position: relative;
+        left: 516px;
+        bottom: 68px;
+    }
+    #title{
+        height: 50px;
+        width: 95%;
+        background-color: gray;
+        margin: 0 auto;
+        position: relative;
+        top: 10px;
+    }
+    #update{
+        background-color: #4999e4;
+        width:100px;
+        height:40px;
+        color: white;
+        border: none;
+        position: relative;
+        margin: 0 auto;
+        display: block;
+        bottom: 35px;
+        right: 100px;
+    }
+    #delete{
+        background-color: #4999e4;
+        width:100px;
+        height:40px;
+        color: white;
+        border: none;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        bottom: 75px;
+        left: 100px;
+    }
+    #update:hover, #delete:hover{
+        background-color: #4a82d6;
+    }
+    #comment{
+        position: relative;
+        left: 40px;
+        bottom: 70px;
+    }
+    #comment-input{
+        background-color: gray;
+        width: 80%;
+        height:100px;
+        position: relative;
+        bottom: 60px;
+        left: 20px;
+    }
+    #comment-btn{
+        background-color: #4999e4;
+        height: 40px;
+        width: 100px;
+        border: none;
+        color: white;
+        position: relative;
+        bottom: 128px;
+        left: 680px;
+    }
+    #comment-btn:hover{
+        background-color: #4a82d6;
+    }
+    #commenter{
+        background-color: gray;
+        height: 50px;
+        width: 150px;
+        position: relative;
+        bottom: 300px;
+        right: 305px;
+        margin: 0 auto;
+    }
+    #comment-date{
+        background-color: gray;
+        height: 50px;
+        width: 150px;
+        height: 50px;
+        width: 200px;
+        position: relative;
+        bottom: 350px;
+        right: 110px;
+        margin: 0 auto;
+    }
+    #comments{
+        height: 100px;
+        width: 640px;
+        background-color: gray;
+        position: relative;
+        bottom: 330px;
+        right: 60px;
+        margin: 0 auto;
+    }
+    #comment-delete{
+        background-color: #4999e4;
+        height: 40px;
+        width: 100px;
+        border: none;
+        color: white;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        bottom: 400px;
+        left: 330px;
+    }
+    #comment-delete:hover{
+        background-color: #4a82d6;
+    }
+</style>
+<body>
+    <div id="banner"><h1>게시판</h1></div>
+    <div id="container">
+        <div id="title"></div>
+        <div id="writer">작성자</div>
+        <div id="writer-input"></div>
+        <div id="date">작성일</div>
+        <div id="date-input"></div>
+        <div id="contents"></div>
+        
+        <button id="update">게시글 수정</button>
+        <button id="delete">게시글 삭제</button>
+        <div id="comment">댓글</div>
+        <div id="comment-input"></div>
+        <button id="comment-btn">댓글쓰기</div>
+        <div id="commenter"></div>
+        <div id="comment-date"></div>
+        <div id="comments"></div>
+        <button id="comment-delete">댓글삭제</button>
+    </div>
+</body>
+</html>

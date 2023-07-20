@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'TheJamsil5Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    }
+    *{
+        font-family: 'TheJamsil5Bold';
+    }
+    h1{
+        text-align: center;
+    }
+    
+    #container{
+        position: relative;
+        margin: 0 auto;
+    }
+    
+    #box1{
+        width:fit-content;
+        position: relative;
+        margin: 0 auto;
+        
+        right: 110px;
+        top: 90px;
+    }
+    #box2{
+        width: fit-content;
+        position: relative;
+        margin: 0 auto;
+        
+        bottom: 52px;
+        left: 150px;
+    }
+    #word1{
+        padding: 10px;
+        display: block;
+        margin: 0 auto;
+        right: 7px;
+        position: relative;
+        
+    }
+    #word2{
+        
+        display: block;
+        margin: 0 auto;
+        padding: 7px;
+        position: relative;
+        
+    }
+    #link1{
+        text-decoration-line: none;
+    }
+    #link2{
+        text-decoration-line: none;
+    }
+    #link1:visited{
+        
+        color:black;
+    }
+    #link2:visited{
+        color:black;
+    }
+    
+    #box1:hover{
+        
+        opacity: 50%;
+    }
+    #box2:hover{
+        opacity: 50%;
+    }
+</style>
+<body>
+    <h1>프로그램 메뉴를 선택해주세요</h1>
+    <div class="container">
+                <div id="box1">
+                    <a id="link1" href="#">
+                        <img src="program.png">
+                        <p id="word1">프로그램 관리</p>
+                    </a>
+                </div>
+            
+                <div id="box2">
+                    <a id="link2" href="#">
+                        <img src="visitor.png">
+                        <p id="word2">신청자 관리</p>
+                    </a>
+                </div>
+            
+        <ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.raspberry.board.dao.MemberDao">
+
+    <insert id="mJoin" parameterType="MemberDto">
+        INSERT INTO memberinfo
+        VALUES (#{uid},#{upwd},#{uname},#{ubirth},
+                #{uemail},#{uphone_num},#{uaddr},#{ugender})
+    </insert>
+    <update id="memberPwUpdate" parameterType="String">
+        UPDATE memberinfo
+        SET  upwd=#{upwd}
+        WHERE uid=#{uid}
+    </update>
+    <update id="mInfoUpdate2">
+        UPDATE memberinfo
+        SET uname=#{uname}, ubirth=#{ubirth}, uphone_num=#{uphone_num}, uaddr=#{uaddr},ugender=#{ugender}
+        WHERE uid=#{uid}
+    </update>
+    <delete id="mDelete">
+        DELETE FROM memberinfo WHERE uid=#{uid}
+    </delete>
+
+    <select id="mIdCheck" resultType="Integer" parameterType="String">
+        SELECT count(*) FROM memberinfo WHERE uid=#{uid}
+    </select>
+
+    <select id="selectPass" resultType="String" parameterType="String">
+        SELECT upwd FROM memberinfo WHERE uid=#{uid}
+    </select>
+
+    <select id="selectMember" resultType="MemberDto"
+        parameterType="String">
+        SELECT * FROM memberview WHERE uid=#{uid}
+    </select>
+    <select id="mFindId2" resultType="String" parameterType="String">
+        SELECT uid FROM memberinfo WHERE uname=#{uname} AND uphone_num=#{uphone_num}
+    </select>
+    <select id="resetPwd2" resultType="Boolean">
+        SELECT count(*) FROM memberinfo WHERE uid=#{uid} AND uname=#{uname} AND uphone_num=#{uphone_num}
+    </select>
+
+
+</mapper>

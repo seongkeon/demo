@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.raspberry.board.dao.ResMemberDao">
+    <select id="rJoin" parameterType="ResMemberDto">
+        INSERT INTO resmemberinfo
+        VALUES (#{rid},#{rpwd},#{rname},#{rbus_num},#{rphone_num}
+            ,#{raddr},#{maindish},#{rnum},#{facil_size})
+    </select>
+
+    <select id="rIdCheck" resultType="java.lang.Integer" parameterType="String">
+        SELECT count(*) FROM resmemberinfo WHERE rid=#{rid}
+    </select>
+
+    <select id="selectPass" resultType="java.lang.String" parameterType="String">
+        SELECT rpwd FROM resmemberinfo WHERE rid=#{rid}
+    </select>
+
+    <select id="selectMember" resultType="com.raspberry.board.dto.ResMemberDto"
+        parameterType="String">
+        SELECT * FROM resmemberview WHERE rid=#{rid}
+    </select>
+
+</mapper>

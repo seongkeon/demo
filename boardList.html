@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시판</title>
+  <style>
+    @font-face {
+      font-family: 'TheJamsil5Bold';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+}
+*{
+  font-family: 'TheJamsil5Bold';
+}
+#banner{
+background-color: #4999e4;
+width: 1200px;
+height: 60px;
+display: flex;
+align-items: center;
+border-radius: 15px;
+margin: 0 auto;
+}
+#banner h1 {
+margin-left: 20px;
+}
+#container{
+  width: 1200px;
+  height: 500px;
+  border-radius: 30px;
+  margin: 0 auto;
+  background-color: #ecf2ff;
+}
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+}
+table * {
+  position: relative;
+}
+table td, table th {
+  padding-left: 8px;
+}
+table thead tr {
+  height: 60px;
+  background: #4999e4;
+  font-size: 18px;
+}
+table tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #E3F1D5;
+}
+.short{
+  width: 200px;
+}
+.long{
+  width: 400px;
+}
+.wbtn{
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-family: 'TheJamsil5Bold';
+  width:200px;
+  background-color: #4999e4;
+  color: #fff;
+  margin-left: 970px;
+  margin-top: -40px;
+  display: block;
+}
+.wbtn:hover{
+  background-color: #4a82d6;
+}
+#search{
+  margin-top: 50px;
+  margin-left: 25px;
+  width: 800px;
+}
+#searchBtn{
+  background-color: #4999e4;
+  border: none;
+  border-radius: 5px;
+  width: 60px;
+  height: 30px;
+  color: #fff;
+  margin-left: 2px;
+}
+#searchBtn:hover{
+  background-color: #4a82d6;
+}
+#searchBox{
+  height: 25px;
+  margin-left: 3px;
+}
+#searchSelect{
+  height: 30px;
+  width: 70px;
+}
+.pagination{
+  position: relative;
+  display: block;
+  margin-left: 500px;
+  margin-top: 20px;
+}
+.pageBtn{
+  background-color: #ffffff;
+  color: black;
+  width: 40px;
+  height: 40px;
+  border-color: rgb(173, 172, 172);
+  border-radius: 5px;
+}
+.selected{
+  background-color: #4a82d6;
+}
+.pagemv{
+  background-color: #ffffff;
+  color: black;
+  width: 25px;
+  height: 25px;
+  border-color: rgb(173, 172, 172);
+  border-radius: 5px;
+}
+  </style>
+</head>
+<body>
+  <div id="banner"><h1>게시판</h1></div><br>
+  <div id="container">
+    <table>
+      <thead>
+        <tr>
+          <th class="short">번호</th>
+          <th class="long">제목</th>
+          <th class="short">작성자</th>
+          <th class="long">날짜</th>
+        </tr>
+      </thead>
+      <tbody id="outputBoardList">
+        <tr>
+          <td id="notice">공지</td>
+          <td colspan="3">게시판 이용 수칙을 준수해주세요.</td>
+        </tr>
+        <tr>
+          <td class="short"></td>
+          <td class="long"></td>
+          <td class="short"></td>
+          <td class="long"></td>
+        </tr>
+        <tr>
+          <td class="short"></td>
+          <td class="long"></td>
+          <td class="short"></td>
+          <td class="long"></td>
+        </tr>
+        <tr>
+          <td class="short"></td>
+          <td class="long"></td>
+          <td class="short"></td>
+          <td class="long"></td>
+        </tr>
+        <tr>
+          <td class="short"></td>
+          <td class="long"></td>
+          <td class="short"></td>
+          <td class="long"></td>
+        </tr>
+        <tr>
+          <td class="short"></td>
+          <td class="long"></td>
+          <td class="short"></td>
+          <td class="long"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="search">
+    <select id="searchSelect">
+      <option value="title" selected>제목</option>
+      <option value="content">내용</option>
+      <input type="text" id="searchBox">
+      <button id="searchBtn">검색</button>
+    </select>
+  </div>
+  <button class="wbtn" id="wbtn">글쓰기</button>
+  <div class="pagination">
+    <button class="pagemv"onclick="previousPage()">&lt;</button>
+    <button id="page1" class="pageBtn" onclick="goToPage(1)">1</button>
+    <button id="page2" class="pageBtn" onclick="goToPage(2)">2</button>
+    <button id="page3" class="pageBtn" onclick="goToPage(3)">3</button>
+    <button id="page4" class="pageBtn" onclick="goToPage(4)">4</button>
+    <button class="pagemv" onclick="nextPage()">&gt;</button>
+  </div>
+  </div>
+</body>
+<script>
+
+</script>
+</html>

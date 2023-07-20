@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        text-decoration: none;
+        font-family:sans-serif;
+      
+      }
+      
+      body {
+        background-image:#34495e;
+      }
+      
+      .joinForm {
+        position:absolute;
+        width:400px;
+        height:400px;
+        padding: 30px, 20px;
+        background-color:#FFFFFF;
+        text-align:center;
+        top:40%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        border-radius: 15px;
+      }
+      
+      .joinForm h2 {
+        text-align: center;
+        margin: 30px;
+      }
+      
+      .textForm {
+        border-bottom: 2px solid #adadad;
+        margin: 30px;
+        padding: 10px 10px;
+        
+      }
+      
+      
+      .id {
+        width: 100%;
+        border:none;
+        outline:none;
+        color: #636e72;
+        font-size:16px;
+        height:25px;
+        background: none;
+      }
+      
+      .pw {
+        width: 100%;
+        border:none;
+        outline:none;
+        color: #636e72;
+        font-size:16px;
+        height:25px;
+        background: none;
+      }
+      .pw_confirm{
+        width: 100%;
+        border:none;
+        outline:none;
+        color: #636e72;
+        font-size:16px;
+        height:25px;
+        background: none;
+      }
+      .name {
+        width: 100%;
+        border:none;
+        outline:none;
+        color: #636e72;
+        font-size:16px;
+        height:25px;
+        background: none;
+      }
+    
+    
+      .email {
+        width: 100%;
+        border:none;
+        outline:none;
+        color: #636e72;
+        font-size:16px;
+        height:25px;
+        background: none;
+      }
+      
+      .birth {
+        width: 100%;
+        border:none;
+        outline:none;
+        color: #636e72;
+        font-size:16px;
+        height:25px;
+        background: none;
+      }
+      
+      .emailcode{
+        width: 100%;
+        border:none;
+        outline:none;
+        color: #636e72;
+        font-size:16px;
+        height:25px;
+        background: none;
+      }
+      
+      .btn {
+        position:relative;
+        left:15%;
+        transform: translateX(-50%);
+        margin-bottom: 40px;
+        width:35%;
+        height:40px;
+        background-color: #4999e4;
+        background-position: left;
+        background-size: 200%;
+        color: white;
+        font-weight: bold;
+        border:none;
+        cursor:pointer;
+        transition: 0.4s;
+        display:inline;
+      }
+      .btn:hover {
+        background-color: #4a82d6;
+        }
+      .back-btn {
+        position:relative;
+        left:20%;
+        transform: translateX(-50%);
+        margin-bottom: 40px;
+        width:35%;
+        height:40px;
+        background-color: #4999e4;
+        background-position: left;
+        background-size: 200%;
+        color:white;
+        font-weight: bold;
+        border:none;
+        cursor:pointer;
+        transition: 0.4s;
+        display:inline;
+      }
+      .back-btn:hover{
+        background-color: #4a82d6;
+      }
+      
+      .w-btn{
+        position: relative;
+        border: none;
+        display: block;
+        padding: 15px 30px;
+        border-radius: 15px;
+        font-family: "paybooc-Light", sans-serif;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.25s;
+        width:150px;
+        margin: 0 auto;
+        left: 270px;
+        top: 675px;
+      }
+      .w-btn-code{
+        position: relative;
+        border: none;
+        display: block;
+        padding: 15px 30px;
+        border-radius: 15px;
+        font-family: "paybooc-Light", sans-serif;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.25s;
+        width:150px;
+        margin: 0 auto;
+        left: 270px;
+        top: 700px;
+      }
+      .w-btn-green{
+        background-color: #77af9c;
+        color: #d7fff1;
+      }
+      .gender{
+        margin-right:370px;
+        width: 200px;
+      }
+      .phone{
+        width: 100%;
+        border:none;
+        outline:none;
+        color: #636e72;
+        font-size:16px;
+        height:25px;
+        background: none;
+      }
+      .w-btn-id{
+        position: relative;
+        border: none;
+        display: block;
+        padding: 15px 30px;
+        border-radius: 15px;
+        font-family: "paybooc-Light", sans-serif;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.25s;
+        width:150px;
+        margin: 0 auto;
+        left: 270px;
+        top: 260px;
+      }
+      
+</style>
+<body>
+    <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
+                                                                                               
+        <h2>회원가입</h2>
+        <div class="textForm">
+          <input name="loginId" type="text" class="id" placeholder="아이디">
+          
+        </div>
+        <div class="textForm">
+          <input name="loginPw" type="password" class="pw" placeholder="비밀번호">
+        </div>
+         <div class="textForm">
+          <input name="loginPwConfirm" type="password" class="pw_confirm" placeholder="비밀번호 확인">
+        </div>
+        <div class="textForm">
+          <input name="name" type="text" class="name" placeholder="이름">
+        </div>
+         <div class="textForm">
+          <input name="birth" type="text" class="birth" placeholder="생년월일">
+        </div>
+        <div class="textForm">
+          <input name="phone" type="text" class="phone" placeholder="전화번호">
+        </div>
+        <div class="textForm">
+          <input name="email" type="text" class="email" placeholder="이메일">
+        </div>
+        <div class="textForm">
+          <input name="emailcode" type="text" class="emailcode" placeholder="안증번호 입력">
+        </div>
+        <div class="textForm">
+            <p style="color:#636e72;" class="gender">성별&nbsp;&nbsp;&nbsp;<input type="radio" class="rad" name="shop"><label for="rad">남</label>&nbsp;&nbsp;
+              <input type="radio" class="rad2" name="shop"><label for="rad2">여</label></p>
+            
+        </div>
+        <input type="submit" class="btn" value="회원가입"/>
+        <input type="submit" class="back-btn" value="뒤로가기"/>
+      </form>
+      <button class="w-btn-id w-btn-green" type="button">중복확인</button>
+      <button class="w-btn w-btn-green" type="button">인증번호 받기</button>
+      <button class="w-btn-code w-btn-green" type="button">인증번호 확인</button>
+      
+      
+      
+</body>
+</html>

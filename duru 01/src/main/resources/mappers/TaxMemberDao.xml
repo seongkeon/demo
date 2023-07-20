@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.raspberry.board.dao.TaxMemberDao">
+    <insert id="tJoin" parameterType="TaxMemberDto">
+        INSERT INTO taxmemberinfo
+        VALUES (#{tid}, #{tpwd}, #{tcom_name}, #{tname}, #{carnum},
+                #{tphone_num}, #{tbus_num}, #{tcar_kind})
+    </insert>
+
+    <update id="taxMemberPwUpdate" parameterType="String">
+        UPDATE taxmemberinfo
+        SET  tpwd=#{tpwd}
+        WHERE tid=#{tid}
+    </update>
+
+    <insert id="addTaxBookInfo" parameterType="TaxBookDto">
+        INSERT INTO TaxBookInfo (current_loc,destination,tcar_kind,thead_count,uid, tid)
+        VALUES (#{current_loc},#{destination},#{tcar_kind},#{thead_count},#{uid}, #{tid})
+    </insert>
+
+    <select id="tIdCheck" resultType="java.lang.Integer" parameterType="String">
+        SELECT count(*) FROM taxmemberinfo WHERE tid=#{tid}
+    </select>
+
+    <select id="selectPass" resultType="java.lang.String" parameterType="String">
+        SELECT tpwd FROM taxmemberinfo WHERE tid=#{tid}
+    </select>
+
+    <select id="selectMember" resultType="com.raspberry.board.dto.TaxMemberDto"
+        parameterType="String">
+        SELECT * FROM taxmemberview WHERE tid=#{tid}
+    </select>
+
+    <select id="getTaxInfo" resultType="TaxMemberDto">
+        SELECT tid, tname, carnum, tphone_num, tcar_kind FROM taxmemberinfo
+        WHERE tcar_kind=#{tcar_kind}
+    </select>
+    <select id="getTaxBookInfo" parameterType="String" resultType="TaxBookDto">
+        SELECT uid, current_loc, destination, thead_count, tcar_kind, tid
+        FROM taxbookinfo WHERE uid=#{uid}
+    </select>
+
+    <select id="getTaxBook" parameterType="String" resultType="TaxBookDto">
+        SELECT uid, current_loc, destination, thead_count, tcar_kind, tid
+        FROM taxbookinfo WHERE tid=#{tid}
+    </select>
+
+    <select id="tFindId2" resultType="String">
+        SELECT tid FROM taxmemberinfo WHERE tname=#{tname} AND tphone_num=#{tphone_num}
+    </select>
+
+    <select id="taxResetPwd2" resultType="Boolean">
+        SELECT count(*) FROM taxmemberinfo WHERE tid=#{tid} AND tname=#{tname} AND tphone_num=#{tphone_num}
+    </select>
+
+</mapper>

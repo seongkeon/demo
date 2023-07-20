@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.raspberry.board.dao.ResCheckDao">
+
+
+
+    <select id="checkResBookInfo" resultType="ResCheckDto">
+        SELECT
+            r.rname,
+            r.raddr,
+            rb.rb_uname,
+            rb.uid,
+            rb.rtime,
+            rb.rhead_count,
+            rbook_num
+        FROM
+            ResMemberInfo r
+                INNER JOIN
+            ResBookInfo rb ON r.rid = rb.rid
+        WHERE
+            rb.uid = #{rb.uid};
+    </select>
+</mapper>

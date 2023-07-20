@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.raspberry.board.dao.TaxMemberDao">
+    <insert id="tJoin" parameterType="TaxMemberDto">
+        INSERT INTO taxmemberinfo
+        VALUES (#{tid}, #{tpwd}, #{tcom_name}, #{tname}, #{tcom_phonenum},
+                #{tphone_num}, #{tbus_num}, #{tcar_kind})
+    </insert>
+    <update id="taxMemberPwUpdate" parameterType="String">
+        UPDATE taxmemberinfo
+        SET  tpwd=#{tpwd}
+        WHERE tid=#{tid}
+    </update>
+    <update id="tInfoUpdate2">
+        UPDATE taxmemberinfo
+        SET tcom_name=#{tcom_name}, tname=#{tname}, tcom_phonenum=#{tcom_phonenum},
+            tphone_num=#{tphone_num},tbus_num=#{tbus_num},tcar_kind=#{tcar_kind}
+        WHERE tid=#{tid}
+    </update>
+    <delete id="mDelete">
+        DELETE FROM taxmemberinfo WHERE tid=#{tid}
+    </delete>
+
+    <select id="tIdCheck" resultType="java.lang.Integer" parameterType="String">
+        SELECT count(*) FROM taxmemberinfo WHERE tid=#{tid}
+    </select>
+
+    <select id="selectPass" resultType="java.lang.String" parameterType="String">
+        SELECT tpwd FROM taxmemberinfo WHERE tid=#{tid}
+    </select>
+
+    <select id="selectMember" resultType="com.raspberry.board.dto.TaxMemberDto"
+        parameterType="String">
+        SELECT * FROM taxmemberview WHERE tid=#{tid}
+    </select>
+    <select id="tFindId2" resultType="String">
+        SELECT tid FROM taxmemberinfo WHERE tname=#{tname} AND tphone_num=#{tphone_num}
+    </select>
+    <select id="taxResetPwd2" resultType="Boolean">
+        SELECT count(*) FROM taxmemberinfo WHERE tid=#{tid} AND tname=#{tname} AND tphone_num=#{tphone_num}
+    </select>
+</mapper>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resJoin</title>
+    <link rel="stylesheet" href="css/resJoin_style.css" />
+</head>
+<body>
+    <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
+                                                                                               
+        <h2>회원가입</h2>
+        <div class="textForm">
+          <input name="loginId" type="text" class="id" placeholder="아이디">
+          
+        </div>
+        <div class="textForm">
+          <input name="pw" type="password" class="pw" placeholder="비밀번호">
+        </div>
+         <div class="textForm">
+          <input name="pw_confirm" type="password" class="pw_confirm" placeholder="비밀번호 확인">
+        </div>
+        <div class="textForm">
+          <input name="res_name" type="text" class="res_name" placeholder="상호명">
+        </div>
+        <div class="textForm">
+            <input name="res_num" type="text" class="res_num" placeholder="사업자 번호">
+          </div>
+        <div class="textForm">
+          <input name="phone" type="text" class="phone" placeholder="전화번호">
+        </div>
+        <div class="textForm">
+          <input name="address" type="text" class="address" placeholder="음식점 주소">
+        </div>
+        <div class="textForm">
+          <input name="menu" type="text" class="menu" placeholder="주메뉴">
+        </div>
+        <div class="textForm">
+            <input name="menu" type="text" class="menu" placeholder="음식점 전화번호">
+          </div>
+          <div class="textForm">
+            <input name="size" type="text" class="size" placeholder="생활 편의 시설 규모">
+          </div>
+        
+        <input type="submit" class="btn" value="회원가입"/>
+        <input type="submit" class="back-btn" value="뒤로가기"/>
+      </form>
+      <button class="w-btn-id w-btn-green" type="button">중복확인</button>
+      
+      
+      
+      
+</body>
+</html>
